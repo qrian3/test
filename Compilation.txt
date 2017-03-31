@@ -1,0 +1,5 @@
+gcc -g -Werror-implicit-function-declaration   -c -o CSftp.o CSftp.c
+gcc -g -Werror-implicit-function-declaration   -c -o usage.o usage.c
+gcc -g -Werror-implicit-function-declaration   -c -o dir.o dir.c
+gcc -g -Werror-implicit-function-declaration   -c -o Thread.o Thread.c
+gcc -o CSftp CSftp.o usage.o dir.o Thread.o  -pthread

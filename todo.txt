@@ -1,0 +1,22 @@
+1. take a single argument (port number)
+
+2. listens to connections
+3. accepts connection from the client
+4. responds with 220 to initiate a login sequence
+		- the only username that the program accepts is cs317 and no password required
+5. once logged in the server will accept certain ftp commands until the connection
+	 is closed by the client, or the quit command is sent
+6. use threads to allow up to 4 ftp clients to interact with your server
+
+7. USER
+8. QUIT
+9. TYPE (only Image type)
+10. MODE (only stream mode)
+11. STRU (only File structure type)
+12. RETR
+13. PASV
+14. NLIST to produce a directory listing
+		 - only with no command parameters
+		 - respond with 501 if has parameters
+
+15. any command that your server does not support, respond with 500
